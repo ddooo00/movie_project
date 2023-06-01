@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legend Movie Collections</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- <header><h1>Legend Movies</h1></header> -->
+    <div class="header">
+      <span>L</span>
+      <span>e</span>
+      <span>g</span>
+      <span>e</span>
+      <span>n</span>
+      <span style="padding-right: 15px">d</span>
+      <span>M</span>
+      <span>o</span>
+      <span>v</span>
+      <span>i</span>
+      <span>e</span>
+      <span>s</span>
+      <span>🎬</span>
+    </div>
+
+    <form class="searchbox">
+      <label id="search_letter">movie search : </label>
+      <input type="text" id="search" placeholder="Search the movie title!" />
+      <button onclick="filter()" type="button" class="searching" id="searchBtn">
+        Search
+      </button>
+    </form>
+    <section id="card-list" class="card_container">
+      <div class="card">
+        <img class="img" id="img" src="../homework1/맹구.png" alt="" />
+
+        <h3 class="movie-title">MengGu</h3>
+        <p class="movie_overview">
+          movie summary-movie summary-movie summary-movie summary-movie
+          summary-movie summary-movie summary-movie summary-movie summary-movie
+          summary-movie summary-movie summary-
+        </p>
+        <p class="movie_vote_average">Rating : 9</p>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>

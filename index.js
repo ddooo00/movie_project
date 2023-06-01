@@ -55,10 +55,10 @@ function filter() {
   }
 }
 
-//submit  아니라 필요 없는듯....?
-// document.getElementById("searchBtn").addEventListener("click", (e) => {
-//   e.preventDefault();
-// });
+//근데 이거 submit  아니라 필요 없는듯....?
+document.getElementById("searchBtn").addEventListener("click", (e) => {
+  e.preventDefault();
+});
 
 // //필터로 거르기 , indexOf, css바꾸기
 // function filter() {

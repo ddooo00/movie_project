@@ -65,13 +65,6 @@ fetch(
 
     searchBtn.addEventListener("click", filter);
     searchInput.addEventListener("keydown", submitName);
-
-    function submitName(event) {
-      if (event.key === "Enter") {
-        event.preventDefault(); // Prevent form submission
-        filter();
-      }
-    }
   });
 
 // document.getElementById("search").addEventListener("keyup", function (e) {

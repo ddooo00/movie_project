@@ -1,3 +1,32 @@
+// 엔터키 누르면 버튼 온클릭되게 하기
+function submitName(event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // Prevent form submission
+    filter();
+  }
+}
+// 카드 누르면 아이디값 나오게 하기
+function showId(movieId) {
+  alert(`Movie ID: ${movieId}`);
+}
+// 검색한 영화만 나오게 하기
+function filter() {
+  let search = document.getElementById("search").value.toLowerCase();
+  let card = document.getElementsByClassName("card");
+
+  for (let i = 0; i < card.length; i++) {
+    let title = card[i]
+      .getElementsByClassName("movie-title")[0]
+      .textContent.toLowerCase();
+
+    if (title.includes(search)) {
+      card[i].style.display = "flex";
+    } else {
+      card[i].style.display = "none";
+    }
+  }
+}
+// API
 const options = {
   method: "GET",
   headers: {
@@ -29,36 +58,30 @@ fetch(
         .getElementById("card-list")
         .insertAdjacentHTML("beforeend", template);
     });
-  })
 
-  .catch((err) => console.error(err));
+    // API 호출 완료 후 검색 버튼 및 엔터 키 입력 이벤트 처리
+    const searchBtn = document.getElementById("searchBtn");
+    const searchInput = document.getElementById("search");
 
-//template   + 클릭 시 카드 id값 보이게 하기
-function showId(clicked_id) {
-  alert("영화 id : " + clicked_id);
-}
+    searchBtn.addEventListener("click", filter);
+    searchInput.addEventListener("keydown", submitName);
+    searchInput.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault(); // Prevent form submission
+        filter();
+      }
+    });
+  });
 
-//버튼 클릭 시, 겁색한 영화만 보이게
-function filter() {
-  let search = document.getElementById("search").value.toLowerCase();
-  let card = document.getElementsByClassName("card");
-  console.log(search);
-
-  for (let i = 0; i < card.length; i++) {
-    title = card[i].getElementsByClassName("movie-title");
-
-    if (title[0].innerHTML.toLowerCase().indexOf(search) != -1) {
-      card[i].style.display = "flex";
-    } else {
-      card[i].style.display = "none";
-    }
-  }
-}
-
+// document.getElementById("search").addEventListener("keyup", function (e) {
+//   if (e.code === "Enter") {
+//     document.getElementById("searchBtn").click();
+//   }
+// });
 //근데 이거 submit  아니라 필요 없는듯....?
-document.getElementById("searchBtn").addEventListener("click", (e) => {
-  e.preventDefault();
-});
+// document.getElementById("searchBtn").addEventListener("click", (e) => {
+//   e.preventDefault();
+// });
 
 // //필터로 거르기 , indexOf, css바꾸기
 // function filter() {

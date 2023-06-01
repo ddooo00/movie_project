@@ -22,15 +22,27 @@
     </div>
 
     <form class="searchbox">
-      <label id="search_letter">movie search : </label>
-      <input type="text" id="search" placeholder="Search the movie title!" />
-      <button onclick="filter()" type="button" class="searching" id="searchBtn">
+      <label for="search">Movie search:</label>
+      <input
+        onkeyup="submitName(event)"
+        type="text"
+        class="search2"
+        id="search"
+        placeholder="Search the movie title!"
+      />
+
+      <button
+        onclick="filter(event)"
+        type="button"
+        class="searching"
+        id="searchBtn"
+      >
         Search
       </button>
     </form>
     <section id="card-list" class="card_container">
       <div class="card">
-        <img class="img" id="img" src="../homework1/맹구.png" alt="" />
+        <img class="img" id="img" src="./맹구.png" alt="" />
 
         <h3 class="movie-title">MengGu</h3>
         <p class="movie_overview">

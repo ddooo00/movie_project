@@ -147,7 +147,8 @@ body {
 
 .card_container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
   justify-content: center;
   margin: 0 20px 0 20px;
 }

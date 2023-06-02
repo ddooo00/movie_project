@@ -7,6 +7,7 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* 메가박스 글씨 */
 .header {
   display: flex;
   justify-content: center;
@@ -73,6 +74,7 @@ body {
 
 /* --- 물결치게 하기 끝 */
 
+/* 검색하는 곳 전체 div */
 .searchbox {
   width: 100%;
   display: flex;

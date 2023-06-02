@@ -35,9 +35,8 @@ const options = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZjcwODRkYzgxMjZhN2Q0YTJjNTY0NTI0ZjFlNjg5NCIsInN1YiI6IjY0NzQ2MDNjOTQwOGVjMDBhN2ZiNGFiZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8q-ScrA47MKBVXKXv7LALyn7qYF6qcrIM7fD3u1_200",
   },
 };
-
 fetch(
-  "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
+  "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
   options
 )
   .then((response) => response.json())

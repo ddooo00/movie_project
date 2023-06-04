@@ -1,8 +1,13 @@
+
 // 엔터키 누르면 버튼 온클릭되게 하기
 function submitName(event) {
   if (event.key === "Enter") {
+    if (!document.getElementById('search').value) {
+      alert ('검색어를 입력해주세요.')
+    }
     event.preventDefault(); // Prevent form submission
     filter();
+    console.log(1)
   }
 }
 // 카드 누르면 아이디값 나오게 하기
@@ -13,17 +18,22 @@ function showId(movieId) {
 function filter() {
   let search = document.getElementById("search").value.toLowerCase();
   let card = document.getElementsByClassName("card");
-
+  const searchResultArr = [];
   for (let i = 0; i < card.length; i++) {
-    let title = card[i]
+    let titleInputValue = card[i]
       .getElementsByClassName("movie-title")[0]
       .textContent.toLowerCase();
-
-    if (title.includes(search)) {
+    if (titleInputValue.includes(search)) {
       card[i].style.display = "flex";
+      searchResultArr.push(titleInputValue)
+      console.log(searchResultArr)
     } else {
       card[i].style.display = "none";
     }
+  }
+  console.log(searchResultArr)
+  if (!searchResultArr) {
+    alert('일치하는 결과가 없습니다.')
   }
 }
 // API
@@ -35,67 +45,39 @@ const options = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZjcwODRkYzgxMjZhN2Q0YTJjNTY0NTI0ZjFlNjg5NCIsInN1YiI6IjY0NzQ2MDNjOTQwOGVjMDBhN2ZiNGFiZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8q-ScrA47MKBVXKXv7LALyn7qYF6qcrIM7fD3u1_200",
   },
 };
-fetch(
-  "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
-  options
-)
-  .then((response) => response.json())
-  .then((response) => {
-    console.log(response.results);
-    document.querySelector(".card").remove();
-    response.results.forEach((movie) => {
-      let template = ` <div class="card">
-                            <img onclick='showId(${movie.id})'  class="img" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="" />
-                            <h3 class="movie-title">${movie.title}</h3>
-                            <p class="movie_overview">
-                            ${movie.overview}
-                            </p>
-                            <p class="movie_vote_average">💯Rating : ${movie.vote_average}</p>
-                        </div>`;
 
-      document
-        .getElementById("card-list")
-        .insertAdjacentHTML("beforeend", template);
-    });
+const fetchData = async () => {
+  const res = await fetch(
+    "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
+    options
+  )
+  const data = await res.json();
+  return data.results
+}
 
-    // API 호출 완료 후 검색 버튼 및 엔터 키 입력 이벤트 처리
-    const searchBtn = document.getElementById("searchBtn");
-    const searchInput = document.getElementById("search");
+export const makeMovieCards = async () => {
+  const movies = await fetchData();
+  console.log(movies)
+  const cardContainer = document.getElementById('card-list');
 
-    searchBtn.addEventListener("click", filter);
-    searchInput.addEventListener("keydown", submitName);
-  });
+  cardContainer.innerHTML = movies.map(movie => {
+    return `
+    <div class="card" _id="${movie.id}">
+      <img class="img" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="" />
+      <h3 class="movie-title">${movie.title}</h3>
+      <p class="movie_overview">
+      ${movie.overview}
+      </p>
+      <p class="movie_vote_average">💯Rating : ${movie.vote_average}</p>
+    </div>
+    `
+  }).join('');
 
-// document.getElementById("search").addEventListener("keyup", function (e) {
-//   if (e.code === "Enter") {
-//     document.getElementById("searchBtn").click();
-//   }
-// });
-//근데 이거 submit  아니라 필요 없는듯....?
-// document.getElementById("searchBtn").addEventListener("click", (e) => {
-//   e.preventDefault();
-// });
+  document.querySelectorAll('.card').forEach(el => {
+    el.addEventListener('click', (e) => {
+      alert(e.currentTarget.getAttribute('_id'))
+    })
+  })
+}
 
-// //필터로 거르기 , indexOf, css바꾸기
-// function filter() {
-//   let searchInput = document.getElementById("searchInput").value.toLowerCase;
-//   let card_container =
-//     document.getElementsByClassName("card_container")[0].value;
-// }
-// for (let i = 0; i < card_container.length; i++) {
-//   title = card_container[i].getElementsByClassName("movie.title");
-//   if (title[0].innerHTML.toLowerCase().indexOf(searchInput) != -1) {
-//     card_container[i].style.display = "block";
-//   } else {
-//     card_container[i].style.display = "none";
-//   }
-// }
 
-// const searchInput = document.getElementById("search");
-// const searchBtn = document.getElementById("searchBtn");
-
-// searchBtn.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   const val = searchInput.value;
-//   console.log(val);
-// });

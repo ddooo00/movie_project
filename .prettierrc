@@ -1,0 +1,18 @@
+{
+    "arrowParens": "avoid",
+    "bracketSpacing": false,
+    "printWidth": 80,
+    "semi": true,
+    "proseWrap": "preserve",
+    "tabWidth": 2,
+    "filepath": "",
+    "useTabs": false,
+    "overrides": [ 
+    {
+      "files": "*.json",
+      "options": {
+        "printWidth": 200
+      }
+    }
+]
+}

@@ -1,57 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mega BOX(popular)</title>
-    <link rel="stylesheet" href="./index.css" />
-  </head>
-  <body>
-    <div class="header">
-      <!-- <header><h1>Mega Box</h1></header> -->
-      <span>M</span>
-      <span>e</span>
-      <span>g</span>
-      <span style="padding-right: 15px">a</span>
-      <span>B</span>
-      <span>O</span>
-      <span>X</span>
-      <span>🎬</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mega BOX(popular)</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+  <div class="header">
+    <div>하하하하하</div>
+    <!-- <header><h1>Mega Box</h1></header> -->
+    <span>M</span>
+    <span>e</span>
+    <span>g</span>
+    <span style="padding-right: 15px">a</span>
+    <span>B</span>
+    <span>O</span>
+    <span>X</span>
+    <span>🎬</span>
+  </div>
+
+  <form class="searchbox">
+    <label id="search_letter" for="search">Movie search:</label>
+    <input onkeyup="submitName(event)" type="text" class="search2" id="search" placeholder="Search the movie title!" />
+
+    <button onclick="filter(event)" type="button" class="searching" id="searchBtn">
+      Search
+    </button>
+  </form>
+  <section id="card-list" class="card_container">
+    <div class="card">
+      <img class="img" id="img" src="./맹구.png" alt="" />
+
+      <h3 class="movie-title">MengGu</h3>
+      <p class="movie_overview">
+        movie summary-movie summary-movie summary-movie summary-movie
+        summary-movie summary-movie summary-movie summary-movie summary-movie
+        summary-movie summary-movie summary-
+      </p>
+      <p class="movie_vote_average">Rating : 9</p>
     </div>
+  </section>
+  <script src="./index.js"></script>
+</body>
 
-    <form class="searchbox">
-      <label id="search_letter" for="search">Movie search:</label>
-      <input
-        onkeyup="submitName(event)"
-        type="text"
-        class="search2"
-        id="search"
-        placeholder="Search the movie title!"
-      />
-
-      <button
-        onclick="filter(event)"
-        type="button"
-        class="searching"
-        id="searchBtn"
-      >
-        Search
-      </button>
-    </form>
-    <section id="card-list" class="card_container">
-      <div class="card">
-        <img class="img" id="img" src="./맹구.png" alt="" />
-
-        <h3 class="movie-title">MengGu</h3>
-        <p class="movie_overview">
-          movie summary-movie summary-movie summary-movie summary-movie
-          summary-movie summary-movie summary-movie summary-movie summary-movie
-          summary-movie summary-movie summary-
-        </p>
-        <p class="movie_vote_average">Rating : 9</p>
-      </div>
-    </section>
-    <script src="./index.js"></script>
-  </body>
 </html>

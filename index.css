@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 메가박스 글씨 */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  font-size: 50px;
+  font-weight: bold;
+}
+/* 제목 물결치게 하기 --- */
+@keyframes anime_textup {
+  0% {
+    top: 0;
+  }
+  20% {
+    top: -0.2rem;
+  }
+  40% {
+    top: 0;
+  }
+  60% {
+    top: 0;
+  }
+  80% {
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.header span {
+  position: relative;
+  animation: anime_textup 1.5s infinite;
+}
+
+.header span:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+
+.header span:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.header span:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+
+.header span:nth-of-type(4) {
+  animation-delay: 0.4s;
+}
+
+.header span:nth-of-type(5) {
+  animation-delay: 0.5s;
+}
+.header span:nth-of-type(6) {
+  animation-delay: 0.6s;
+}
+.header span:nth-of-type(7) {
+  animation-delay: 0.7s;
+}
+.header span:nth-of-type(8) {
+  animation-delay: 0.8s;
+}
+
+/* --- 물결치게 하기 끝 */
+
+/* 검색하는 곳 전체 div */
+.searchbox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* movie search 글씨 */
+#search_letter {
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-decoration: underline blueviolet;
+  text-decoration-style: wavy;
+}
+
+/* search inputbox */
+#search {
+  margin: 0 10px 0 10px;
+  width: 240px;
+  border: 3px solid blueviolet;
+}
+
+#searchBtn {
+  width: 70px;
+  height: 30px;
+  cursor: pointer;
+  /* border: 3px solid #8ed000; */
+  background: blueviolet;
+  border-radius: 100px;
+  color: darkslategray;
+  box-shadow: 5px 5px 8px blueviolet;
+  transition: 0.3s;
+  position: relative;
+  border: none;
+}
+
+#searchBtn:hover {
+  /* background-color: blueviolet; */
+  color: white;
+  transform: scale(1.2);
+}
+/* btn circle */
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+#searchBtn:hover::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 5px solid blueviolet;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  margin: 0 20px 0 20px;
+}
+
+.movie-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie_vote_average {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  cursor: pointer;
+  /* border: 2px solid white; */
+  /* background-color: yellowgreen; */
+  margin: 20px;
+  max-width: 400px;
+  border-radius: 80px;
+}
+.card:hover {
+  opacity: 0.8;
+  max-width: 420px;
+  border: 3px dashed gray;
+}
+.img {
+  border-radius: 80px;
+}

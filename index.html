@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mega BOX(popular)</title>
+    <title>🎬Mega BOX🎬</title>
     <link rel="stylesheet" href="./css/index.css" />
   </head>
-
   <body>
     <div class="header">
       <!-- <header><h1>Mega Box</h1></header> -->
@@ -20,25 +19,15 @@
       <span>X</span>
       <span>🎬</span>
     </div>
-
     <form class="searchbox">
       <label id="search_letter" for="search">Movie search:</label>
       <input
-        onkeyup="submitName(event)"
         type="text"
         class="search2"
         id="search"
         placeholder="Search the movie title!"
       />
-
-      <button
-        onclick="filter(event)"
-        type="button"
-        class="searching"
-        id="searchBtn"
-      >
-        Search
-      </button>
+      <button type="button" class="searching" id="searchBtn">Search</button>
     </form>
     <section id="card-list" class="card_container">
       <div class="card">
@@ -53,6 +42,6 @@
         <p class="movie_vote_average">Rating : 9</p>
       </div>
     </section>
-    <script src="./js/index.js"></script>
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>

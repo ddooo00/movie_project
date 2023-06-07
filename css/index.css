@@ -37,6 +37,7 @@ body {
   width: 130px;
   height: 20px;
 }
+
 /* 제목 물결치게 하기 --- */
 @keyframes anime_textup {
   0% {

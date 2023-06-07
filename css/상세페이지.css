@@ -115,7 +115,6 @@ ul li a {
   flex-direction: row;
 }
 
-
 #face {
   width: 60px;
   height: auto;
@@ -137,17 +136,32 @@ ul li a {
 .event_title {
   font-size: 18px;
   margin-bottom: 15px;
+  color: blueviolet;
+  font-weight: bold;
+  text-align: center;
 }
 .event_img {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
+
 #e_img {
-  margin-right: 35px;
-  border-radius: 200px;
+  margin-right: 10px;
+  border-radius: 30px;
 }
+#e_img2 {
+  margin-left: 10px;
+  border-radius: 30px;
+}
+#e_img:hover {
+  opacity: 0.8;
+}
+#e_img2:hover {
+  opacity: 0.8;
+}
+
 .company {
   /* background-color: cadetblue; */
   width: 100%;
@@ -299,7 +313,8 @@ input {
   align-items: center;
   gap: 30px;
   margin-bottom: 80px;
-  width: 100%; max-width: 1200px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 #comment-container h3 {

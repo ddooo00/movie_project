@@ -48,9 +48,9 @@ const options = {
 
 let videoKey;
 fetch(
-  `https://api.themoviedb.org/3/movie/${
-    localStorage.getItem('id')
-  }/videos?language=en-US`,
+  `https://api.themoviedb.org/3/movie/${localStorage.getItem(
+    "id"
+  )}/videos?language=en-US`,
   options
 )
   .then((response) => response.json())

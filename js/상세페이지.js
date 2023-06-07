@@ -24,50 +24,6 @@ document.getElementById("comment-input").placeholder = `${localStorage.getItem(
   "title"
 )} 재미있게 보셨나요? 영화의 어떤 점이 좋았는지 이야기해주세요.`;
 
-const commentInfo = JSON.parse(
-  localStorage.getItem(localStorage.getItem("id"))
-);
-console.log(commentInfo);
-if (commentInfo) {
-  document.getElementById("comments-list").style.display = "flex";
-  let userName = commentInfo["user name"];
-  let comment = commentInfo.comment;
-  if (!userName) {
-    userName = "Anonymous";
-  }
-  document.getElementById("writer").innerText = userName;
-  document.getElementById("comment-list").value = comment;
-}
-localStorage.setItem("a", 123);
-
-const writeButton = document.getElementById("write-comment-icon-container");
-let start;
-let later;
-let counter = 0;
-let movieId = localStorage.getItem("id");
-writeButton.addEventListener("mousedown", (e) => {
-  start = Date.now();
-});
-writeButton.addEventListener("mouseup", (e) => {
-  later = Date.now();
-  if (later - start > 600) {
-    const userName = prompt("유저 이름을 입력하세요.");
-    const password = prompt("비밀번호를 입력해주세요.");
-    localStorage.setItem(
-      movieId,
-      JSON.stringify({
-        "user name": userName,
-        id: movieId,
-        title: localStorage.getItem("title"),
-        comment: document.getElementById("comment-input").value,
-        password: password,
-      })
-    );
-    alert("댓글을 저장했습니다.");
-    location.reload();
-  }
-});
-
 document.getElementById("main-back").addEventListener("click", () => {
   location.href = "./index.html";
 });
@@ -77,22 +33,6 @@ document
   .addEventListener("mousedown", (e) => {
     e.preventDefault();
   });
-
-document.getElementById("edit-button").addEventListener("click", () => {
-  if (confirm("수정하시겠습니까?")) {
-    const triedPassword = prompt("비밀번호를 입력해주세요.");
-    const thePassword = JSON.parse(localStorage.getItem(movieId)).password;
-    if (triedPassword === thePassword) {
-      alert("댓글을 다시 입력해주세요.");
-      document.getElementById("comment-input").focus();
-      document.getElementById("comment-input").value =
-        document.getElementById("comment-list").value;
-    } else {
-      alert("비밀번호가 틀렸습니다. \n다시 시도해 주세요.");
-    }
-  }
-});
-
 //
 //
 //
@@ -109,14 +49,13 @@ const options = {
 let videoKey;
 fetch(
   `https://api.themoviedb.org/3/movie/${
-    JSON.parse(localStorage.getItem(movieId)).id
+    localStorage.getItem('id')
   }/videos?language=en-US`,
   options
 )
   .then((response) => response.json())
-  .then((response) => {
-    console.log(response);
-    videoKey = response.results[response.results.length - 1]["key"];
+  .then((data) => {
+    videoKey = data.results[data.results.length - 1]["key"];
   })
   .catch((err) => console.error(err));
 
@@ -126,9 +65,10 @@ function onYouTubeIframeAPIReady() {
     videoId: videoKey,
     playerVars: {
       playsinline: 1,
-      autoplay: 1,
+      playlist: videoKey,
+      autoplay: 0,
       color: "white",
-      controls: 0,
+      controls: 1,
       fs: 1,
     },
     events: {},

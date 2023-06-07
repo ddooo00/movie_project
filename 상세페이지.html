@@ -86,12 +86,14 @@
             <p>관람평쓰기</p>
           </div>
         </div>
-        <div id="comments-list">
-          <span id="writer">김환훈</span>
-          <input type="text" name="comment-list" id="comment-list" readonly />
-          <div id="comment-list-container">
-            <img id="edit-button" src="./img/edit.png" />
-            <img id="delete-button" src="./img/delete.png" />
+        <div class="comments-list">
+          <div class="comment">
+            <span class="writer">김환훈</span>
+            <input type="text" name="comment-list" class="comment-value" readonly value="asdfasdfs"/>
+            <div class="comment-list-container">
+              <img class="edit-button" src="./img/edit.png" />
+              <img class="delete-button" src="./img/delete.png" />
+            </div>
           </div>
         </div>
       </div>
@@ -155,6 +157,7 @@
     </div>
 
     <script src="./js/상세페이지.js"></script>
+    <script src="./js/comment.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
   </body>
 </html>

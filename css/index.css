@@ -119,13 +119,12 @@ body {
 }
 
 #searchBtn {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
-  /* border: 3px solid #8ed000; */
-
-  background: white;
-  border-radius: 100px;
+  background: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-search-white.png)
+    center/cover no-repeat;
+  border-radius: 10px;
   color: black;
   /* box-shadow: 5px 5px 8px blueviolet; */
   transition: 0.3s;
@@ -166,11 +165,6 @@ body {
   animation: ring 1.5s infinite;
 }
 
-.icon_search {
-  width: 18px;
-  height: 18px;
-  background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-search-white.png);
-}
 .iconset {
   overflow: hidden;
   display: inline-block;

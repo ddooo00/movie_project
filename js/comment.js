@@ -51,11 +51,19 @@ submitBtn.addEventListener("mouseup", (e) => {
   // 즉, 클릭을 600ms 이상 하고 있다가 떼었을때 다음 함수를 실행
   if (later - start > 600) {
     // 댓글 배열에 다음의 내용을 추가, comment_id는 현재의 시간 값을 생성하여 고유 댓글 번호를 줌.
+    let username = prompt('이름을 입력하세요.')
+    let password = prompt('비밀번호를 입력하세요.')
+    if (username === null || password === null) {
+        alert('취소하였습니다.')
+        return
+    } else if (!username) {
+        username = '익명'
+    }
     commentListArr.push(
         {
-            'commenter': prompt('이름을 입력하세요.'),
+            'commenter': username,
             'comment_id': D.getTime(),
-            'password': prompt('비밀번호를 입력하세요.'),
+            'password': password,
             'comment_value': document.getElementById('comment-input').value,
             'time': TIME,
         }

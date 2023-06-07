@@ -71,7 +71,9 @@ function onYouTubeIframeAPIReady() {
       controls: 1,
       fs: 1,
     },
-    events: {},
+    events: {
+      onError: onPlyaerError
+    },
   });
 }
 
@@ -79,7 +81,10 @@ function onYouTubeIframeAPIReady() {
 function onPlayerReady(event) {
   event.target.playVideo();
 }
-
+function onPlyaerError(event) {
+  console.log('YouTube 동영상 재생 중 오류 발생:');
+  console.log('오류 코드:', event.data);
+}
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.

@@ -25,14 +25,14 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
-  width: 180px;
+  width: 200px;
   height: 50px;
 }
 .logo_img2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 28px;
+  margin-left: 45px;
   margin-bottom: 10px;
   width: 130px;
   height: 20px;
@@ -71,7 +71,7 @@ body {
   bottom: 0;
 }
 .nav-item:not(.is-active):hover {
-  color: blueviolet;
+  color: rgb(155, 72, 233);
   font-weight: bold;
 }
 .nav-indicator {
@@ -98,28 +98,9 @@ ul li a {
   color: black;
 }
 
-.small {
-  background-color: greenyellow;
-  width: 100%;
-  height: 280px;
-}
-
 .main {
   display: flex;
   flex-direction: row;
-}
-
-.desc {
-  background-color: aqua;
-  width: 50%;
-  height: 250px;
-}
-.video {
-  background-color: aquamarine;
-  width: 50%;
-  height: 250px;
-}
-.bottom {
 }
 
 .comment {
@@ -166,7 +147,6 @@ ul li a {
 
 .event {
   background-color: white;
-  width: 100%;
   height: 300px;
 }
 .event_title {
@@ -202,8 +182,9 @@ ul li a {
   text-align: center;
 }
 #footer_img {
-  width: 150px;
+  width: 170px;
   height: 50px;
+  margin-bottom: 13px;
 }
 .icon1 {
   width: 30px;
@@ -226,6 +207,230 @@ ul li a {
   background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-twitterN.png);
 }
 
-.address {
-  margin-top: -30px;
+.address p {
+  padding-bottom: 15px;
+}
+
+/* 환훈님꺼 */
+input {
+  outline: none;
+}
+
+#main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+#movie-detail-sect-1 {
+  position: relative;
+  display: flex;
+  padding: 30px 50px;
+  background-color: rgb(58, 58, 58) !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 250% !important;
+  background-blend-mode: multiply;
+  color: white;
+}
+
+#main-info-left-buttons-container {
+  display: flex;
+  gap: 20px;
+}
+
+#main-info-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+#main-info-right {
+  display: flex;
+}
+/* 포스터 */
+#main-poster img {
+  width: 300px;
+  margin: 0 20px;
+  border-radius: 8px;
+}
+
+#main-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#main-info-likes,
+#main-info-share {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#main-info-likes img {
+  width: 32px;
+}
+#main-info-share img {
+  width: 28px;
+}
+
+/* sect 2 */
+
+#movie-detail-sect-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+#overwiew-container {
+}
+
+#overwiew-container h2 {
+  text-align: center;
+  padding: 50px 0 20px 0;
+  font-size: 1.8rem;
+}
+#overwiew-container p {
+  text-align: justify;
+  padding: 10px 10% 20px 10%;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #222;
+}
+
+#comment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+#comment-container h3 {
+  width: 80%;
+  padding: 20px 0 0 0;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+#comment-input-container {
+  display: flex;
+  width: 80%;
+  position: relative;
+}
+#comment-input,
+#comment-list {
+  width: 100%;
+  padding: 15px;
+  padding-right: 150px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 5px 0 #c0c0c0;
+  color: #222;
+}
+#comment-list {
+  padding-left: 60px;
+}
+#write-comment-icon-container {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 10px;
+  border-width: 0px 0px 0px 2px;
+  border-color: #735936;
+  border-style: dotted;
+  padding: 10px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  transition: ease-in-out 1s;
+}
+
+#write-comment-icon-container img {
+  width: 32px;
+}
+#write-comment-icon-container p,
+#comment-list-container p {
+  padding-top: 5px;
+}
+#write-comment-icon-container:hover {
+  transform: translateX(-30px);
+  transition: ease-in-out 0.2s;
+  border-color: #ae7122;
+  border-style: dotted;
+  border-width: 2px;
+}
+#write-comment-icon-container:active {
+  transform: translateX(0px);
+  transition: ease-in-out 0.6s;
+  border-color: #ae7122;
+  border-style: dotted;
+  border-width: 2px;
+}
+
+#comments-list {
+  display: none;
+  width: 80%;
+  position: relative;
+}
+
+#comment-list-container {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+  flex-direction: row;
+  justify-content: end;
+  gap: 15px;
+  border-width: 0px 0px 0px 1px;
+  border-color: #b2b2b2;
+  border-style: solid;
+  padding: 10px;
+  border-radius: 0 10px 10px 0;
+
+  transition: ease-in-out 1s;
+  width: 132px;
+}
+
+#comment-list-container img {
+  width: 22px;
+  cursor: pointer;
+}
+
+#main-back {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 32px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: ease-in-out 0.4s;
+}
+#main-back:hover {
+  transition: ease-in-out 0.2s;
+  opacity: 1;
+}
+
+#writer {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+}
+
+#player {
+  outline: #222 1px solid;
+  margin: 30px auto;
+  background: #000;
+  transform: scale(1);
+  transition: 1s ease-in-out;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#player:hover {
+  transform: scale(1.2);
+  transition: 0.3s ease-in-out;
 }

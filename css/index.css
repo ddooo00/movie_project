@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 0;
+  padding: 60px 0 0px 0px;
   font-size: 50px;
   font-weight: bold;
 }
@@ -79,7 +79,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 40px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -94,19 +94,21 @@ body {
 /* search inputbox */
 #search {
   margin: 0 10px 0 10px;
-  width: 240px;
-  border: 3px solid blueviolet;
+  width: 290px;
+  padding: 7px 6px;
+  border: none;
+  outline: none;
 }
 
 #searchBtn {
   width: 70px;
-  height: 30px;
+  height: 33px;
   cursor: pointer;
   /* border: 3px solid #8ed000; */
   background: blueviolet;
-  border-radius: 100px;
-  color: darkslategray;
-  box-shadow: 5px 5px 8px blueviolet;
+  border-radius: 6px;
+  color: #fff;
+  box-shadow: 1px 1px 4px #595959;
   transition: 0.3s;
   position: relative;
   border: none;
@@ -115,7 +117,7 @@ body {
 #searchBtn:hover {
   /* background-color: blueviolet; */
   color: white;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 /* btn circle */
 @keyframes ring {
@@ -125,16 +127,16 @@ body {
     opacity: 1;
   }
   100% {
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     opacity: 0;
   }
 }
 
 #searchBtn:hover::after {
   content: "";
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 100%;
   border: 5px solid blueviolet;
   position: absolute;
@@ -146,41 +148,43 @@ body {
 }
 
 .card_container {
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 2rem;
+  gap: 30px 0px;
+  padding: 35px 100px 100px 100px;
   justify-content: center;
-  margin: 0 20px 0 20px;
 }
-
-.movie-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.movie_vote_average {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .card {
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
-  justify-self: center;
   cursor: pointer;
-  /* border: 2px solid white; */
-  /* background-color: yellowgreen; */
+  background: #ddd;
+  padding: 12px;
   margin: 20px;
   max-width: 400px;
-  border-radius: 80px;
+  height: 100%;
+  transition: 0.5s;
+  text-align: center;
+  position: relative; left: 0; bottom: 0;
+}
+.movie-title {
+  padding: 15px 0px;
+}
+.movie_overview{
+  font-size: 15px;
+  padding-bottom: 15px;
+}
+.movie_vote_average {
+  position: absolute; left: 50%; bottom: 20px;
+  margin-left: -52px;
 }
 .card:hover {
-  opacity: 0.8;
-  max-width: 420px;
-  border: 3px dashed gray;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+  background: #fff;
+  z-index: 1;
 }
 .img {
-  border-radius: 80px;
 }

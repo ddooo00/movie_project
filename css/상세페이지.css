@@ -259,6 +259,9 @@ input {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative; left: 0;
 }
 #main-info-likes,
 #main-info-share {
@@ -278,6 +281,8 @@ input {
 #movie-detail-sect-2 {
   display: flex;
   flex-direction: column;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 #overwiew-container {
@@ -290,7 +295,7 @@ input {
 }
 #overwiew-container p {
   text-align: justify;
-  padding: 10px 10% 20px 10%;
+  padding: 10px 0 20px 0;
   font-size: 1rem;
   line-height: 1.2;
   color: #222;
@@ -402,14 +407,14 @@ input {
 
 #main-back {
   position: absolute;
-  top: 20px;
-  left: 10px;
+  top: -3px;
+  left: -95px;
   width: 32px;
   cursor: pointer;
   opacity: 0.6;
   transition: ease-in-out 0.4s;
 }
-#main-back:hover {
+#main-back:hover{
   transition: ease-in-out 0.2s;
   opacity: 1;
 }
@@ -431,6 +436,6 @@ input {
 }
 
 #player:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: 0.3s ease-in-out;
 }

@@ -18,7 +18,7 @@ const fetchData = async () => {
 };
 export const makeMovieCards = async () => {
   const movies = await fetchData();
-  console.log(movies);
+  console.table(movies);
   const cardContainer = document.getElementById("card-list");
   const movieInfo = [];
   cardContainer.innerHTML = movies

@@ -49,54 +49,49 @@ body {
   width: 130px;
   height: 20px;
 }
+/* 네비게이션바 시작 */
 .nav {
-  display: inline-flex;
-  position: relative;
-  overflow: hidden;
-  max-width: 100%;
-  padding: 0 20px;
-}
-.nav-item {
-  color: black;
-  padding: 20px;
-  text-decoration: none;
-  transition: 0.3s;
-  margin: 0 6px;
-  z-index: 1;
-  font-weight: 500;
-  position: relative;
-}
-.nav-item:before {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background-color: #dfe2ea;
-  border-radius: 8px 8px 0 0;
-  opacity: 0;
-  transition: 0.3s;
-}
-.nav-item:not(.is-active):hover:before {
-  opacity: 1;
-  bottom: 0;
-}
-.nav-item:not(.is-active):hover {
-  color: rgb(155, 72, 233);
-  font-weight: bold;
-}
-.nav-indicator {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 4px;
-  transition: 0.4s;
-  height: 5px;
-  z-index: 1;
-  border-radius: 8px 8px 0 0;
+  display: flex;
+  flex-direction: row;
 }
 
+.dropbtn {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  /* margin-right: 80px; */
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: indigo;
+  color: white;
+}
+/* 네비게이션 바 끝 */
 ul {
   list-style: none;
   border-left: 1px solid #c6c6c6;
@@ -135,7 +130,7 @@ ul li a {
 }
 .event_title {
   font-size: 18px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   color: blueviolet;
   font-weight: bold;
   text-align: center;
@@ -145,6 +140,7 @@ ul li a {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 #e_img {
@@ -161,11 +157,16 @@ ul li a {
 #e_img2:hover {
   opacity: 0.8;
 }
+#adver {
+  width: 100%;
+  height: 60px;
+}
 
 .company {
   /* background-color: cadetblue; */
   width: 100%;
-  height: 200px;
+  height: 180px;
+  margin-top: 130px;
 }
 .footer_sns {
   display: flex;
@@ -221,6 +222,7 @@ input {
   padding-bottom: 20px;
 }
 #movie-detail-sect-1 {
+  width: 100%;
   position: relative;
   display: flex;
   padding: 30px 50px;

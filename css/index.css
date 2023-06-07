@@ -4,17 +4,38 @@
   padding: 0;
 }
 body {
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* 메가박스 글씨 */
 .header {
+}
+.title {
+  /* background-color: goldenrod; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  margin-bottom: -5px;
+  margin-top: 20px;
+}
+.logo_img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 0;
-  font-size: 50px;
-  font-weight: bold;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 50px;
+}
+.logo_img2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 45px;
+  margin-bottom: 10px;
+  width: 130px;
+  height: 20px;
 }
 /* 제목 물결치게 하기 --- */
 @keyframes anime_textup {
@@ -76,37 +97,36 @@ body {
 
 /* 검색하는 곳 전체 div */
 .searchbox {
-  width: 100%;
+  width: 14%;
   display: flex;
   justify-content: center;
   padding: 20px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* movie search 글씨 */
-#search_letter {
-  font-size: 18px;
-  margin-bottom: 5px;
-  text-decoration: underline blueviolet;
-  text-decoration-style: wavy;
+  background-color: white;
+  border-bottom: 1px solid black;
+  margin: auto;
+  margin-bottom: 40px;
+  padding-bottom: 5px;
 }
 
 /* search inputbox */
 #search {
   margin: 0 10px 0 10px;
-  width: 240px;
-  border: 3px solid blueviolet;
+  width: 230px;
+  border: 0px solid white;
+  background-color: white;
+  font-size: 23px;
 }
 
 #searchBtn {
-  width: 70px;
+  width: 30px;
   height: 30px;
   cursor: pointer;
   /* border: 3px solid #8ed000; */
-  background: blueviolet;
+
+  background: white;
   border-radius: 100px;
-  color: darkslategray;
-  box-shadow: 5px 5px 8px blueviolet;
+  color: black;
+  /* box-shadow: 5px 5px 8px blueviolet; */
   transition: 0.3s;
   position: relative;
   border: none;
@@ -136,13 +156,30 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 100%;
-  border: 5px solid blueviolet;
+  border: 5px solid gray;
   position: absolute;
   z-index: -1;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.3);
   animation: ring 1.5s infinite;
+}
+
+.icon_search {
+  width: 18px;
+  height: 18px;
+  background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-search-white.png);
+}
+.iconset {
+  overflow: hidden;
+  display: inline-block;
+  margin: -1px 0 0 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: middle;
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .card_container {

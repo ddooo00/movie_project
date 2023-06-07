@@ -9,26 +9,33 @@
   </head>
   <body>
     <div class="header">
-      <!-- <header><h1>Mega Box</h1></header> -->
-      <span>M</span>
-      <span>e</span>
-      <span>g</span>
-      <span style="padding-right: 15px">a</span>
-      <span>B</span>
-      <span>O</span>
-      <span>X</span>
-      <span>🎬</span>
+      <div class="title">
+        <p class="logo">
+          <img class="logo_img" src="./img/logo.png" alt="" />
+          <img class="logo_img2" src="./img/logo-sub.png" alt="" />
+        </p>
+      </div>
     </div>
     <form class="searchbox">
-      <label id="search_letter" for="search">Movie search:</label>
+      <!-- <label id="search_letter" for="search">Movie search:</label> -->
       <input
+        onkeyup="submitName(event)"
         type="text"
         class="search2"
         id="search"
         placeholder="Search the movie title!"
       />
-      <button type="button" class="searching" id="searchBtn">Search</button>
+
+      <button
+        onclick="filter(event)"
+        type="button"
+        class="searching"
+        id="searchBtn"
+      >
+        <i class="iconset icon_search"></i>
+      </button>
     </form>
+
     <section id="card-list" class="card_container">
       <div class="card">
         <img class="img" id="img" src="./맹구.png" alt="" />

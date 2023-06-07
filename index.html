@@ -1,14 +1,25 @@
 <!DOCTYPE html>
+<!-- 좋아요기능 -->
+<html lang="en">
+
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mega BOX(popular)</title>
-    <link rel="stylesheet" href="./index.css" />
-  </head>
+    <title>🎬Mega BOX🎬</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    
+    <!-- 좋아요버튼 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  </head>
   <body>
+    <div class = "top-right">
+      <a class = "top-right-element" >로그인</p> 
+      <a class = "top-right-element">회원가입</p> 
+      <a class = "top-right-element">빠른예매</p>
+    </div>
     <div class="header">
       <!-- <header><h1>Mega Box</h1></header> -->
       <span>M</span>
@@ -20,26 +31,33 @@
       <span>X</span>
       <span>🎬</span>
     </div>
+    <!-- nav -->
+  <div class="navbar">
+    <nav class="nav">
+      <a href="#" class="nav-item">영화</a>
+      <a href="#" class="nav-item">예매</a>
+      <a href="#" class="nav-item">극장</a>
+      <a href="#" class="nav-item">이벤트</a>
+      <a href="#" class="nav-item">스토어</a>
+      <a href="#" class="nav-item">혜택</a>
+    </nav>
+  </div>
+
 
     <form class="searchbox">
       <label id="search_letter" for="search">Movie search:</label>
       <input
-        onkeyup="submitName(event)"
         type="text"
         class="search2"
         id="search"
         placeholder="Search the movie title!"
       />
-
-      <button
-        onclick="filter(event)"
-        type="button"
-        class="searching"
-        id="searchBtn"
-      >
-        Search
-      </button>
+      <button type="button" class="searching" id="searchBtn">Search</button>
     </form>
+
+
+
+
     <section id="card-list" class="card_container">
       <div class="card">
         <img class="img" id="img" src="./맹구.png" alt="" />
@@ -53,6 +71,39 @@
         <p class="movie_vote_average">Rating : 9</p>
       </div>
     </section>
-    <script src="./index.js"></script>
+
+    <div class="footer_info">
+      <h2>
+        <img id="footer_img" src="./img/logo.png" alt="megabox" />
+      </h2>
+      <ul>
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">인재채용</a></li>
+        <li><a href="#">제휴/광고/부대사업 문의</a></li>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">위치기반서비스 이용약관</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">윤리경영</a></li>
+      </ul>
+      <address class="address">
+        <p>
+          <br />
+          🏠서울특별시 강남구 내일배움캠프 React A반 10조<br />
+          <span>💯10점만점에 10조</span><br />
+          👤조장 : 김환훈 <br />
+          👥조원 : 이소영, 한희, 최다연, 황대성<br />
+        </p>
+        <p>Copyright 2014 by MegaboxJoongAng Inc. All right reserved</p>
+      </address>
+    </div>
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>
+
+
+<!-- 좋아요 버튼 -->
+<div class="toggle">
+  <button id='btn'>
+    <i class="fa fa-thumbs-up"></i>
+  </button>
+</div>

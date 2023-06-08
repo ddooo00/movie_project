@@ -8,8 +8,16 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous'/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <script defer src="/js/detail.js"></script>
@@ -28,17 +36,69 @@
         <header>
           <nav>
             <ul class="menu-list">
-              <li>ABOUT</li>
-              <li>VIDEOS</li>
-              <li>FEATURED</li>
-              <li>GALLERY</li>
+              <li id="li1">
+                <a
+                  id="shake"
+                  style="
+                    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000,
+                      0 -1px #000;
+                  "
+                  href=""
+                  >ABOUT</a
+                >
+              </li>
+              <li id="li2">
+                <a
+                  id="shake"
+                  style="
+                    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000,
+                      0 -1px #000;
+                  "
+                  href=""
+                  >VIDEOS</a
+                >
+              </li>
+              <li ld="li3">
+                <a
+                  id="shake"
+                  style="
+                    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000,
+                      0 -1px #000;
+                  "
+                  href=""
+                  >EVENT</a
+                >
+              </li>
+              <li id="li4">
+                <a
+                  id="shake"
+                  style="
+                    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000,
+                      0 -1px #000;
+                  "
+                  href=""
+                  >GALLERY</a
+                >
+              </li>
             </ul>
           </nav>
         </header>
         <section>
           <div class="section-inner">
-            <p id="detail-title">JOKER</p>
-            <p class="detail-overview">
+            <p
+              style="
+                text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+              "
+              id="detail-title"
+            >
+              JOKER
+            </p>
+            <p
+              style="
+                text-shadow: -1px 0 #a8a0a0, 0 1px #000, 1px 0 #000, 0 -1px #000;
+              "
+              class="detail-overview"
+            >
               After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly
               neighborhood Spider-Man is catapulted across the Multiverse, where
               he encounters the Spider Society, a team of Spider-People charged
@@ -47,14 +107,21 @@
               pitted against the other Spiders and must set out on his own to
               save those he loves most.
             </p>
-            <p class="learn-more">LEARN MORE</p>
+            <p class="learn-more">
+              <img id="move" src="./img/jaconda-pop-corn.gif" alt="" /> Movie
+              Trailer <a id="point">↓</a>
+            </p>
             <dl>
-              <dt>
-                01. ACTORS
-              </dt>
-              <dd>
-                Joaquin Phoenix
-              </dd>
+              <iframe
+                class="player"
+                frameborder="0"
+                allowfullscreen="1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                title="FAST X | Official Trailer"
+                width="100%"
+                height="250"
+                src="https://www.youtube.com/embed/32RAq6JzY-w?playsinline=1&amp;playlist=32RAq6JzY-w&amp;autoplay=0&amp;color=white&amp;controls=1&amp;fs=1&amp;enablejsapi=1&amp;origin=http%3A%2F%2F127.0.0.1%3A5500&amp;widgetid=1"
+              ></iframe>
             </dl>
           </div>
         </section>
@@ -64,8 +131,9 @@
           <div class="sns">
             <ul class="sns-list">
               <li class="followUs">FOLLOW US</li>
-              <li><i class="fa fa-brands fa-facebook-f"></i></li>
+
               <li><i class="fa fa-brands fa-youtube"></i></li>
+              <li><i class="fa fa-brands fa-facebook-f"></i></li>
               <li><i class="fa fa-brands fa-twitter"></i></li>
             </ul>
           </div>
@@ -73,21 +141,54 @@
         <div class="movieInfo-wrap">
           <ul class="movieInfo-list">
             <li>
-              <p class="movieInfo-title">PREMIERE</p>
-              <p class="movieInfo-info">4 Octorber 2019</p>
+              <p class="movieInfo-title">GROUP</p>
+              <p class="movieInfo-info">React A 10점만점에 10조</p>
             </li>
             <li>
-              <p class="movieInfo-title">DIRECTOR</p>
-              <p class="movieInfo-info">Todd Phillips</p>
+              <p class="movieInfo-title">captain</p>
+              <p class="movieInfo-info">Kim Whan Hoon</p>
             </li>
             <li>
-              <p class="movieInfo-title">MUSIC BY</p>
-              <p class="movieInfo-info">Hidur Guanadottir</p>
+              <p class="movieInfo-title">Member</p>
+              <p class="movieInfo-info">
+                Lee so Young / Han hee /<br />
+                Hwang dae sung / choi da yeon
+              </p>
             </li>
           </ul>
         </div>
-        <iframe class="player" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="FAST X | Official Trailer" width="100%" height="250" src="https://www.youtube.com/embed/32RAq6JzY-w?playsinline=1&amp;playlist=32RAq6JzY-w&amp;autoplay=0&amp;color=white&amp;controls=1&amp;fs=1&amp;enablejsapi=1&amp;origin=http%3A%2F%2F127.0.0.1%3A5500&amp;widgetid=1"></iframe>
+        <div id="comment-container">
+          <h3
+            style="font-weight: bold; text-decoration: dashed; font-size: 17px"
+          >
+            OOOO에 대한 한줄평을 작성해주세요!
+          </h3>
+          <div id="comment-input-container">
+            <input type="text" name="comment" id="comment-input" />
+            <div id="write-comment-icon-container">
+              <img src="./img/write-comment-animated.gif" />
+              <p>관람평쓰기</p>
+            </div>
+          </div>
+          <div class="comments-list">
+            <div class="comment">
+              <span class="writer">김환훈</span>
+              <input
+                type="text"
+                name="comment-list"
+                class="comment-value"
+                readonly
+                value="asdfasdfs"
+              />
+              <div class="comment-list-container">
+                <img class="edit-button" src="./img/edit.png" />
+                <img class="delete-button" src="./img/delete.png" />
+              </div>
+            </div>
+          </div>
+        </div>
       </aside>
     </div>
+    <script src="./js/comment.js"></script>
   </body>
 </html>

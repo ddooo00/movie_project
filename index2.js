@@ -61,7 +61,10 @@ const populate = async () => {
     const mainRatePercentage = `${data[randomNum].vote_average * 10}%`;
     const backdropImg = `${imgBaseUrl}/original${path}`;
     // main background image applied.
-    main.style.background = `url('${backdropImg}')`;
+    main.style.backgroundImage = `url('${backdropImg}')`;
+    main.style.backgroundBlendMode = 'multiply';
+    main.style.backgroundColor = 'rgba(0,0,0,0.2)';
+
     document.getElementById('main-movie-title').innerText = mainTitle;
     document.getElementById('main-rate').innerText = mainRate;
     // document.getElementById('main-running-time').innerText = ;

@@ -42,26 +42,51 @@ const fetchPoster = async (movieId) => {
         options
     );
     const data = await res.json();
-    console.log(data);
     return data;
 };
 
 const populate = async () => {
     const main = document.querySelector('main');
     const data = await fetchMovie();
-    const posterResult = await fetchPoster(data[0].id);
+    const randomNum = Math.floor(Math.random() * 20);
+    const runningTime = Number(await fetchMovieDetails(data[randomNum].id));
+    document.getElementById(
+        'main-running-time'
+    ).innerText = `${runningTime} Minutes`;
+    const posterResult = await fetchPoster(data[randomNum].id);
     const path = posterResult.backdrops[0].file_path;
+    const mainTitle = data[randomNum].title;
+    const mainRate = data[randomNum].vote_average;
+    const mainPlot = data[randomNum].overview;
+    const mainRatePercentage = `${data[randomNum].vote_average * 10}%`;
     const backdropImg = `${imgBaseUrl}/original${path}`;
     // main background image applied.
-    // main.style.background = `url('${backdropImg}')`;
+    main.style.background = `url('${backdropImg}')`;
+    document.getElementById('main-movie-title').innerText = mainTitle;
+    document.getElementById('main-rate').innerText = mainRate;
+    // document.getElementById('main-running-time').innerText = ;
+    document.getElementById('main-rate-percentage').innerText =
+        mainRatePercentage;
+    document.getElementById('main-plot').innerText = mainPlot;
 };
 
 populate();
+// SHUFFLE ICON EVENT => 랜덤 영화들 가져오기
 document.getElementById('random-icon').addEventListener('click', () => {
     const randomNumber = Math.floor(Math.random() * 50);
     makeMovieCards(randomNumber);
+    populate();
     document.getElementById('cards-container').style.opacity = 0;
     setTimeout(() => {
         document.getElementById('cards-container').style.opacity = 1;
     }, 500);
 });
+
+const fetchMovieDetails = async (R) => {
+    const response = await fetch(
+        `https://api.themoviedb.org/3/movie/${R}?language=en-US`,
+        options
+    );
+    const data = await response.json();
+    return data.runtime;
+};

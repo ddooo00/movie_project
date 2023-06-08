@@ -5,9 +5,9 @@
 }
 
 body {
+  transition: ease-in-out 0.4s;
 }
-.header {
-}
+
 #main-back {
   position: absolute;
   top: 20px;
@@ -17,10 +17,12 @@ body {
   opacity: 0.6;
   transition: ease-in-out 0.4s;
 }
+
 #main-back:hover {
   transition: ease-in-out 0.2s;
   opacity: 1;
 }
+
 .title {
   /* background-color: goldenrod; */
   display: flex;
@@ -28,10 +30,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .logo {
   margin-bottom: -5px;
   margin-top: 20px;
 }
+
 .logo_img {
   display: flex;
   justify-content: center;
@@ -40,6 +44,7 @@ body {
   width: 200px;
   height: 50px;
 }
+
 .logo_img2 {
   display: flex;
   justify-content: center;
@@ -49,14 +54,15 @@ body {
   width: 130px;
   height: 20px;
 }
-/* 네비게이션바 시작 */
+
 .nav {
   display: flex;
   flex-direction: row;
 }
 
-.dropbtn {
-  background-color: white;
+
+.nav-item {
+
   color: black;
   padding: 16px;
   font-size: 18px;
@@ -67,25 +73,37 @@ body {
 .dropdown {
   position: relative;
 }
-.dropdown-content {
-  display: none;
+
+.nav-item:before {
+  content: "";
+
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+
+.nav-item:not(.is-active):hover:before {
+  opacity: 1;
+  bottom: 0;
 }
-.dropdown-content a:hover {
-  background-color: #ddd;
+
+.nav-item:not(.is-active):hover {
+  color: rgb(155, 72, 233);
+  font-weight: bold;
 }
-.dropdown:hover .dropdown-content {
-  display: block;
+
+.nav-indicator {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  transition: 0.4s;
+  height: 5px;
+  z-index: 1;
+  border-radius: 8px 8px 0 0;
+
 }
 .dropdown:hover .dropbtn {
   background-color: indigo;
@@ -96,10 +114,12 @@ ul {
   list-style: none;
   border-left: 1px solid #c6c6c6;
 }
+
 li {
   float: left;
   margin-right: 20px;
 }
+
 ul li a {
   text-decoration: none;
   color: black;
@@ -115,9 +135,11 @@ ul li a {
   height: auto;
   font-size: 28px;
 }
+
 .write {
   width: 100%;
 }
+
 #button {
   background-color: white;
   border: 1px solid black;
@@ -128,6 +150,7 @@ ul li a {
   background-color: white;
   height: 300px;
 }
+
 .event_title {
   font-size: 18px;
   margin-bottom: 25px;
@@ -135,6 +158,7 @@ ul li a {
   font-weight: bold;
   text-align: center;
 }
+
 .event_img {
   display: flex;
   flex-direction: row;
@@ -147,13 +171,16 @@ ul li a {
   margin-right: 10px;
   border-radius: 30px;
 }
+
 #e_img2 {
   margin-left: 10px;
   border-radius: 30px;
 }
+
 #e_img:hover {
   opacity: 0.8;
 }
+
 #e_img2:hover {
   opacity: 0.8;
 }
@@ -168,6 +195,7 @@ ul li a {
   height: 180px;
   margin-top: 130px;
 }
+
 .footer_sns {
   display: flex;
   justify-content: right;
@@ -181,26 +209,31 @@ ul li a {
   align-items: center;
   text-align: center;
 }
+
 #footer_img {
   width: 170px;
   height: 50px;
   margin-bottom: 13px;
 }
+
 .icon1 {
   width: 30px;
   height: 30px;
   background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-youtubeN.png);
 }
+
 .icon2 {
   width: 30px;
   height: 30px;
   background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-instagramN.png);
 }
+
 .icon3 {
   width: 30px;
   height: 30px;
   background-image: url(https://img.megabox.co.kr/static/pc/images/common/ico/ico-facebookN.png);
 }
+
 .icon4 {
   width: 30px;
   height: 30px;
@@ -221,6 +254,7 @@ input {
   font-weight: 700;
   padding-bottom: 20px;
 }
+
 #movie-detail-sect-1 {
   width: 100%;
   position: relative;
@@ -249,6 +283,7 @@ input {
 #main-info-right {
   display: flex;
 }
+
 /* 포스터 */
 #main-poster img {
   width: 300px;
@@ -261,15 +296,18 @@ input {
   justify-content: space-between;
   width: 100%;
 }
+
 #main-info-likes,
 #main-info-share {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 #main-info-likes img {
   width: 32px;
 }
+
 #main-info-share img {
   width: 28px;
 }
@@ -301,6 +339,7 @@ input {
   padding: 50px 0 20px 0;
   font-size: 1.8rem;
 }
+
 #overwiew-container p {
   text-align: justify;
   padding: 10px 10% 20px 10%;
@@ -331,6 +370,7 @@ input {
   width: 80%;
   position: relative;
 }
+
 #comment-input {
   width: 100%;
   padding: 15px;
@@ -341,9 +381,11 @@ input {
   color: #222;
   padding-left: 60px;
 }
+
 #comment-input {
   padding-left: 12px;
 }
+
 #write-comment-icon-container {
   position: absolute;
   display: flex;
@@ -365,10 +407,12 @@ input {
 #write-comment-icon-container img {
   width: 32px;
 }
+
 #write-comment-icon-container p,
 #comment-list-container p {
   padding-top: 5px;
 }
+
 #write-comment-icon-container:hover {
   transform: translateX(-30px);
   transition: ease-in-out 0.2s;
@@ -376,6 +420,7 @@ input {
   border-style: dotted;
   border-width: 2px;
 }
+
 #write-comment-icon-container:active {
   transform: translateX(0px);
   transition: ease-in-out 0.6s;

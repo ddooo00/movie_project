@@ -1,53 +1,111 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🎬Mega BOX🎬</title>
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
-  </head>
-  <body>
-    <div class="header">
-      <div class="title">
-        <p class="logo">
-          <img class="logo_img" src="./img/logo.png" alt="" />
-          <img class="logo_img2" src="./img/logo-sub.png" alt="" />
-        </p>
-      </div>
-    </div>
-    <form class="searchbox">
-      <!-- <label id="search_letter" for="search">Movie search:</label> -->
-      <input
-        onkeyup="submitName(event)"
-        type="text"
-        class="search2"
-        id="search"
-        placeholder="Search the movie title!"
-      />
-      <button
-        onclick="filter(event)"
-        type="button"
-        class="searching"
-        id="searchBtn"
-      >
-        <i class="icon_search"></i>
-      </button>
-    </form>
+    <script src="/index2.js" type="module" defer></script>
+    <script src="/js/index.js" type="module" defer></script>
+    <script src="/docorate.js" type="module" defer></script>
+</head>
 
-    <section id="card-list" class="card_container">
-      <div class="card">
-        <img class="img" id="img" src="./맹구.png" alt="" />
+<body style="opacity: 0;">
+    <main>
+        <header>
+            <div id="logo-container">
+                <h1 id="logo">WatchTime</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a id="nav-home">Home</a></li>
+                    <li><a id="nav-movies">Movies</a></li>
+                    <li><a id="nav-tv">TV Series</a></li>
+                    <li><a id="nav-people">People</a></li>
+                    <li><a id="nav-about">About</a></li>
+                </ul>
+            </nav>
+            <div id="random-container">
+                <img id="random-icon" src="img/random2.png" alt="random movie">
+            </div>
+            <div id="search-icon-container">
+                <img id="search-icon" src="img/search.png" alt="search icon">
+            </div>
+            <div id="search-result-container">
+                <input id="search-input" type="text" placeholder="Search" autocomplete="off">
+            </div>
+            <div id="header-profile-div">
+                <img src="./img/profile.png" alt="profile picture" />
+                <div id="profile-notification-mark">3</div>
+            </div>
+        </header>
+        <section id="section-1">
+            <div id="main-movie-container">
+                <h1 id="main-movie-title">TENET</h1>
+                <div id="main-movie-icons-container">
+                    <div class="main-icons-div">
+                        <img src="img/star.png" alt="ratings" />
+                        <h2>IMDB</h2>
+                        <h2>7.5</h2>
+                    </div>
+                    <div class="main-icons-div">
+                        <img src="img/time.png" alt="play time" />
+                        <h2>2H 30M</h2>
+                    </div>
+                    <div class="main-icons-div">
+                        <img src="img/like.png" alt="likes" />
+                        <h2>87%</h2>
+                        <h2>LOVE</h2>
+                    </div>
+                </div>
+                <div id="main-plot-div">
+                    <p>
+                        Armed with only one word - Tenet - and fighting for
+                        the survival of the entire world, the Protagonist
+                        journeys through a twilight world of international
+                        espionage on a mission that will unfold in something
+                        beyond real time.
+                    </p>
+                </div>
+                <div id="main-buttons-div">
+                    <div class="play-trailer-button main-buttons" id="main-play-trailer-button">
+                        <img src="img/play.png" alt="play button" />
+                        <h4>Play Trailer</h4>
+                    </div>
+                    <div id="save-for-later-button" class="main-buttons">
+                        <img src="img/save-black.png" alt="save button" />
+                        <h4>Save For Later</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-2">
+            <img src="img/arrow_left.png" alt="arrow to brwose next cards" id="arrow-left" class="arrows" />
+            <img src="img/arrow_right.png" alt="arrow to brwose previous cards" id="arrow-right" class="arrows" />
+            <div id="cards-container">
+                <div class="card">
+                    <div class="card-rate">
+                        <img class="card-rate-left-star" src="img/star-black.png" alt="" />
+                        <p>7.9</p>
+                    </div>
+                    <img class="card-poster" src="img/poster-1.jpeg" alt="" />
+                    <div class="card-movie-info">
+                        <h2 class="card-movie-title">
+                            John Wick: Chapter 4
+                        </h2>
+                        <h3 class="card-movie-genre">Action</h3>
+                    </div>
+                    <div class="card-play-trailer-button" id="card-play-trailer-button">
+                        <img src="img/play.png" alt="" />
+                        <h4>Play Trailer</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
 
-        <h3 class="movie-title">MengGu</h3>
-        <p class="movie_overview">
-          movie summary-movie summary-movie summary-movie summary-movie
-          summary-movie summary-movie summary-movie summary-movie summary-movie
-          summary-movie summary-movie summary-
-        </p>
-        <p class="movie_vote_average">Rating : 9</p>
-      </div>
-    </section>
-    <script src="./js/index.js" type="module"></script>
-  </body>
 </html>

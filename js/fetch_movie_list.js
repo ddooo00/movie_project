@@ -66,10 +66,11 @@ export const makeMovieCards = async (i) => {
                     break;
                 }
             }
-            document.querySelector('body').style.opacity = 0;
+            document.querySelector('main').style.opacity = 0;
+            document.getElementById('loading').style.opacity = 1;
             setTimeout(() => {
                 window.location.href = './상세페이지.html';
-            }, 400);
+            }, 1000);
         });
     });
 };

@@ -2,7 +2,7 @@ import { filter } from './js/fetch_movie_list.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
-        document.querySelector('body').style.opacity = 1;
+        document.querySelector('main').style.opacity = 1;
     }, 500);
 });
 

@@ -10,7 +10,6 @@ let commentListArr;
 // localStorage에 이미 등록된 한줄평이 있으면, 가져오고 아니면 새로 생성하기
 if (localStorage.getItem(MOVIE_ID)) {
     commentListArr = JSON.parse(localStorage.getItem(MOVIE_ID));
-    console.log(0, commentListArr);
 } else {
     commentListArr = [];
 }
@@ -69,7 +68,6 @@ submitBtn.addEventListener('mouseup', (e) => {
         } else if (!username) {
             username = '익명';
         }
-        console.log(1, commentListArr);
         commentListArr.push({
             commenter: username,
             comment_id: D.getTime(),

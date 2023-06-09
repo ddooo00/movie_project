@@ -1,4 +1,4 @@
-import { filter } from './js/fetch_movie_list.js';
+import { filter } from './fetch_movie_list.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {

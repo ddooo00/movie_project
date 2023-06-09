@@ -35,12 +35,13 @@ export const makeMovieCards = async (i) => {
                     selectedMovieGenre = genre.name;
                 }
             });
+            let fallbackPoster = './img/poster-2.jpeg';
             movieInfo.push({
                 id: movie.id,
                 title: movie.title,
                 overview: movie.overview,
                 rate: movie.vote_average,
-                poster: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
+                poster: `https://image.tmdb.org/t/p/w342${movie.poster_path}`,
                 backPoster: `https://image.tmdb.org/t/p/original${movie.backdrop_path}`,
                 date: movie.release_date,
                 genre: selectedMovieGenre,
@@ -53,7 +54,7 @@ export const makeMovieCards = async (i) => {
           <p>${movie.vote_average}</p>
       </div>
       <img class="card-poster"
-          src="https://image.tmdb.org/t/p/w342${movie.poster_path}" alt="poster" />
+          src="https://image.tmdb.org/t/p/w342${movie.poster_path}" alt="poster" onerror="this.src='${fallbackPoster}'"/>
       <div class="card-movie-info">
           <h2 class="card-movie-title">${movie.title}</h2>
           <h3 class="card-movie-genre">${selectedMovieGenre}</h3>
@@ -67,7 +68,6 @@ export const makeMovieCards = async (i) => {
         })
         .join('');
     // 카드 누르면 아이디값 나오게 하기
-    console.log(document.querySelectorAll('.card-poster'));
     const saveDataAndMoveToNextpage = (array) => {
         array.forEach((el) => {
             el.addEventListener('click', (e) => {

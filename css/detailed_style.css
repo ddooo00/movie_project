@@ -33,7 +33,7 @@ i {
 #background-img {
   width: 100%;
   min-width: 1200px;
-  height: 100vh;
+  height: calc(100vh + 100px);
   background: url(/img/main-background.jpg) no-repeat;
   background-size: 100% 100% !important;
   background-position: center !important;

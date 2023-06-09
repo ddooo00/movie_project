@@ -112,7 +112,9 @@ header {
 .menu-list a {
   text-decoration: none;
   color: white;
-  font-family: Circular-md, -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: Circular-md, -apple-system, "system-ui", "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   text-shadow: 1px 1px #222;
   transition: 0.25s ease-in-out;
 }
@@ -133,7 +135,9 @@ section {
   flex-direction: column;
   gap: 50px;
   color: white;
-  font-family: Circular-lt, -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  font-family: Circular-lt, -apple-system, "system-ui", "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .section-inner:nth-child(1) {
@@ -159,7 +163,7 @@ section {
 
 .learn-more {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
   font-size: 1.2rem;
@@ -192,7 +196,6 @@ aside {
   float: right;
   box-sizing: border-box;
   border-left: solid 1px var(--border-color);
-
 }
 
 .sns-wrap {
@@ -263,12 +266,10 @@ aside {
 }
 
 @media only screen and (height < 1000px) {
-
   #player {
     width: 600px;
     height: 350px;
   }
-
 }
 
 /* 코멘트 */
@@ -426,14 +427,18 @@ aside {
 
 .movieInfo-wrap p {
   color: white;
-  font-family: Airbnb-Cereal-lt, -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: Airbnb-Cereal-lt, -apple-system, "system-ui", "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   letter-spacing: 0.2px;
   text-shadow: 1px 1px 5px #545454;
 }
 
 .movieInfo-wrap h3 {
   color: white;
-  font-family: Airbnb-Cereal-md, -apple-system, "system-ui", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: Airbnb-Cereal-md, -apple-system, "system-ui", "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   letter-spacing: 0.5px;
   text-shadow: 1px 1px 5px #545454;
   text-transform: uppercase;

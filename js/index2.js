@@ -1,6 +1,5 @@
 import { makeMovieCards } from './fetch_movie_list.js';
 // 영화 목록 불러오기 기능
-document.addEventListener('DOMContentLoaded', makeMovieCards(2));
 
 // API
 const options = {

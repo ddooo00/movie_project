@@ -82,6 +82,8 @@ document.getElementById('search-icon').addEventListener('click', () => {
     } else {
         document.getElementById('search-input').style.opacity = 0;
         document.getElementById('search-input').style.zIndex = -1;
+        document.getElementById('search-input').value = '';
+        filter();
     }
 });
 document.getElementById('search-input').addEventListener('keydown', (e) => {

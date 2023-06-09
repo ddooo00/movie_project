@@ -306,6 +306,7 @@ aside {
   box-shadow: 0 0 5px 0 #c0c0c0;
   color: #222;
   padding-left: 60px;
+  outline: none;
 }
 
 #comment-input {

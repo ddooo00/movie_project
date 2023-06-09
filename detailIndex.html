@@ -1,120 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/detailed_style.css" />
+    <script src="./js/comment.js" defer></script>
+    <script defer src="/js/detail.js"></script>
+    <script src="https://www.youtube.com/iframe_api" defer></script>
+    <!-- <script defer src="/js/comment.js"></script> -->
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" />
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/detailed_style.css" />
-  <script src="./js/comment.js" defer></script>
-  <script defer src="/js/detail.js"></script>
-  <script src="https://www.youtube.com/iframe_api" defer></script>
-  <!-- <script defer src="/js/comment.js"></script> -->
-  <title>Document</title>
-</head>
-
-<body>
-  <div id="background-img">
-    <div class="menuLine-inner">
-      <div id="main-back">
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-    <div class="section-wrap">
-      <header>
-        <nav>
-          <ul class="menu-list">
-            <li id="li1">
-              <a id="shake" href="">ABOUT</a>
-            </li>
-            <li id="li2">
-              <a id="shake" href="">VIDEOS</a>
-            </li>
-            <li ld="li3">
-              <a id="shake" href="">EVENT</a>
-            </li>
-            <li id="li4">
-              <a id="shake" href="">GALLERY</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <section>
-        <div class="section-inner">
-          <h1 id="detail-title"></h1>
-          <p class="detail-overview"></p>
-          <p class="learn-more">
-            <img id="move" src="./img/jaconda-pop-corn.gif" alt="" /> Movie
-            Trailer <a id="point">↓</a>
-          </p>
-        </div>
-        <div id="player"></div>
-      </section>
-    </div>
-    <aside>
-      <div class="sns-wrap">
-        <div class="sns">
-          <ul class="sns-list">
-            <li class="followUs">FOLLOW US</li>
-            <li><i class="fa fa-brands fa-youtube"></i></li>
-            <li><i class="fa fa-brands fa-facebook-f"></i></li>
-            <li><i class="fa fa-brands fa-twitter"></i></li>
-          </ul>
+  <body>
+    <div id="background-img">
+      <div class="menuLine-inner">
+        <div id="main-back">
+          <div></div>
+          <div></div>
         </div>
       </div>
-      <div class="movieInfo-wrap">
-        <ul class="movieInfo-list">
-          <li>
-            <h3 class="movieInfo-title">GROUP</h3>
-            <p class="movieInfo-info">React A 10점만점에 10조</p>
-          </li>
-          <li>
-            <h3 class="movieInfo-title">captain</h3>
-            <p class="movieInfo-info">Kim Hwan Hoon</p>
-          </li>
-          <li>
-            <h3 class="movieInfo-title">Member</h3>
-            <p class="movieInfo-info">
-              Lee so Young / Han hee /<br />
-              Hwang dae sung / choi da yeon
+      <div class="section-wrap">
+        <header>
+          <nav>
+            <ul class="menu-list">
+              <li id="li1">
+                <a id="shake" href="">ABOUT</a>
+              </li>
+              <li id="li2">
+                <a id="shake" href="">VIDEOS</a>
+              </li>
+              <li ld="li3">
+                <a id="shake" href="">EVENT</a>
+              </li>
+              <li id="li4">
+                <a id="shake" href="">GALLERY</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <section>
+          <div class="section-inner">
+            <h1 id="detail-title"></h1>
+            <p class="detail-overview"></p>
+            <p class="learn-more">
+              <img id="move" src="./img/jaconda-pop-corn.gif" alt="" /> Movie
+              Trailer <a id="point">↓</a>
             </p>
-          </li>
-        </ul>
+          </div>
+          <div id="player"></div>
+        </section>
       </div>
-      <div id="comment-container">
-        <h3 style="font-weight: bold; text-decoration: dashed; font-size: 17px">
-          OOOO에 대한 한줄평을 작성해주세요!
-        </h3>
-        <div id="comment-input-container">
-          <input type="text" name="comment" id="comment-input" />
-          <div id="write-comment-icon-container">
-            <img src="./img/write-comment-animated.gif" />
-            <p>관람평쓰기</p>
+      <aside>
+        <div class="sns-wrap">
+          <div class="sns">
+            <ul class="sns-list">
+              <li class="followUs">FOLLOW US</li>
+              <li><i class="fa fa-brands fa-youtube"></i></li>
+              <li><i class="fa fa-brands fa-facebook-f"></i></li>
+              <li><i class="fa fa-brands fa-twitter"></i></li>
+            </ul>
           </div>
         </div>
-        <div class="comments-list">
-          <div class="comment">
-            <span class="writer">김환훈</span>
-            <input type="text" name="comment-list" class="comment-value" readonly value="asdfasdfs" />
-            <div class="comment-list-container">
-              <img class="edit-button" src="./img/edit.png" />
-              <img class="delete-button" src="./img/delete.png" />
+        <div class="movieInfo-wrap">
+          <ul class="movieInfo-list">
+            <li>
+              <h3 class="movieInfo-title">GROUP</h3>
+              <p class="movieInfo-info">React A 10점만점에 10조</p>
+            </li>
+            <li>
+              <h3 class="movieInfo-title">captain</h3>
+              <p class="movieInfo-info">Kim hwan hoon</p>
+            </li>
+            <li>
+              <h3 class="movieInfo-title">Member</h3>
+              <p class="movieInfo-info">
+                Lee so young / Han hee <br />
+                Hwang dae sung / Choi da yeon
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div id="comment-container">
+          <h3
+            style="font-weight: bold; text-decoration: dashed; font-size: 17px"
+          >
+            OOOO에 대한 한줄평을 작성해주세요!
+          </h3>
+          <div id="comment-input-container">
+            <input type="text" name="comment" id="comment-input" />
+            <div id="write-comment-icon-container">
+              <img src="./img/write-comment-animated.gif" />
+              <p>관람평쓰기</p>
+            </div>
+          </div>
+          <div class="comments-list">
+            <div class="comment">
+              <span class="writer">김환훈</span>
+              <input
+                type="text"
+                name="comment-list"
+                class="comment-value"
+                readonly
+                value="asdfasdfs"
+              />
+              <div class="comment-list-container">
+                <img class="edit-button" src="./img/edit.png" />
+                <img class="delete-button" src="./img/delete.png" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </aside>
-  </div>
-
-</body>
-
+      </aside>
+    </div>
+  </body>
 </html>
